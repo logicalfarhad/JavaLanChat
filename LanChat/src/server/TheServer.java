@@ -16,7 +16,7 @@ public class TheServer extends ServerSocket implements Protocol {
 		super(port);
 		halt = new Semaphore(1); //instead of synchronized method
 
-		clients = new HashMap<String, ClientManager>();
+		clients = new HashMap<>();
 
 		while (true) {
 			System.out.println("Waitting for clients to join");

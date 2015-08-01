@@ -75,10 +75,8 @@ public class Converter {
 				newlineReplacement);
 
 		for (int s = 0; s < smileyPatterns.length; s++) {
-			converted = smileyPatterns[s].matcher(converted).replaceAll(
-					smileyReplacements[s]);
+			converted = smileyPatterns[s].matcher(converted).replaceAll(smileyReplacements[s]);
 		}
-
 		return converted;
 	}
 

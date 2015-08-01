@@ -28,7 +28,6 @@ public class Execute {
 				w.setSize(225, 300);
 				w.setDefaultCloseOperation(ClientWindow.EXIT_ON_CLOSE);
 				w.setVisible(true);
-
 				Converter.setImageBase(Converter.YAHOO_BASE);
 			}
 		});

@@ -40,9 +40,7 @@ public class ClientWindow extends JFrame {
 		connectMenu.add(join);
 		connectMenu.add(create);
 
-		JMenuItem gnome = new JMenuItem(gnomeCommand, new ImageIcon(
-				ClassLoader
-						.getSystemResource(Converter.GNOME_BASE + "ICON.png")));
+		JMenuItem gnome = new JMenuItem(gnomeCommand, new ImageIcon(ClassLoader.getSystemResource(Converter.GNOME_BASE + "ICON.png")));
 		JMenuItem yahoo = new JMenuItem(yahooCommand, new ImageIcon(
 				ClassLoader
 						.getSystemResource(Converter.YAHOO_BASE + "ICON.png")));
@@ -156,16 +154,12 @@ public class ClientWindow extends JFrame {
 	}
 
 	private ActionListener getEmoteChangeAction() {
-		return new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				if (e.getActionCommand().equals(yahooCommand)) {
-					Converter.setImageBase(Converter.YAHOO_BASE);
-				} else if (e.getActionCommand().equals(gnomeCommand)) {
-					Converter.setImageBase(Converter.GNOME_BASE);
-				}
-			}
-		};
+		return e -> {
+            if (e.getActionCommand().equals(yahooCommand)) {
+                Converter.setImageBase(Converter.YAHOO_BASE);
+            } else if (e.getActionCommand().equals(gnomeCommand)) {
+                Converter.setImageBase(Converter.GNOME_BASE);
+            }
+        };
 	}
 }
